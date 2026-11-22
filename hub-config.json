@@ -1,0 +1,149 @@
+{
+  "version": "1.5.0",
+  "updatedAt": "2026-11-22T21:00:00+01:00",
+  "profile": {
+    "title": "Bloody Path Gaming",
+    "handle": "@lionspathgaming",
+    "tagline": "Deals, Hardware, UEFN Maps & 3D AI Studio | BPG Community Hub",
+    "statusText": "🔥 Gaming & Deals aktiv",
+    "creatorCode": "BloodyPathGaming"
+  },
+  "cards": [
+    {
+      "id": "dealCardInstantGaming",
+      "category": "keys",
+      "title": "Instant Gaming Store",
+      "url": "https://www.instant-gaming.com/?igr=bloodypathgaming",
+      "badge1": "🔥 DEAL DES TAGES",
+      "badge2": "BIS ZU -70%",
+      "subtitle": "PC-, Steam-, PS5- & Xbox-Keys in Sekundenschnelle per E-Mail",
+      "highlight": "⚡ Top-Vorbestellungen, Steam-Sales & Guthaben zum Bestpreis",
+      "enabled": true
+    },
+    {
+      "id": "dealCardNBB",
+      "category": "hardware",
+      "title": "notebooksbilliger.de",
+      "url": "https://www.awin1.com/cread.php?awinmid=11348&awinaffid=2572227",
+      "badge1": "HARDWARE DEALS",
+      "badge2": "",
+      "subtitle": "Gaming-Laptops, RTX 40-Grafikkarten, OLED-Monitore & Gear",
+      "highlight": "🔥 Deutschlands beliebtester Tech-Shop • Exklusive Rabattaktionen",
+      "enabled": true
+    },
+    {
+      "id": "dealCardGamivo",
+      "category": "keys",
+      "title": "Gamivo Marktplatz",
+      "url": "https://www.gamivo.com/?glv=bloodypathgaming",
+      "badge1": "SMART DEALS",
+      "badge2": "",
+      "subtitle": "Globaler Game-Store für Steam, EA App, Ubisoft & Software",
+      "highlight": "💎 Bis zu -85% Rabatt • Riesiges Key-Sortiment",
+      "enabled": true
+    },
+    {
+      "id": "dealCardEneba",
+      "category": "keys",
+      "title": "Eneba Guthaben & Keys",
+      "url": "https://www.eneba.com",
+      "badge1": "GUTHABEN & PSN",
+      "badge2": "",
+      "subtitle": "PlayStation, Xbox, Nintendo eShop & Mystery Packs",
+      "highlight": "🎁 Günstige Konsolen-Guthabenkarten ohne Abonnement",
+      "enabled": true
+    },
+    {
+      "id": "dealCardEklipse",
+      "category": "creator",
+      "title": "Eklipse.gg AI Studio",
+      "url": "https://eklipse.gg/premium#BPG",
+      "badge1": "AI CLIPPING",
+      "badge2": "",
+      "subtitle": "Automatische TikTok- & YouTube-Shorts aus Gaming-Streams",
+      "highlight": "🎬 KI-Clipper mit Code #BPG für Bonus-Credits & Premium-Features",
+      "enabled": true
+    },
+    {
+      "id": "dealCardMeshy",
+      "category": "creator",
+      "title": "Meshy.ai 3D Generator",
+      "url": "https://www.meshy.ai?via=BPG",
+      "badge1": "3D AI STUDIO",
+      "badge2": "",
+      "subtitle": "Erstelle 3D-Waffen, Props & Texturen aus Text oder Bildern in Sekunden",
+      "highlight": "🧊 Unser Tool für UEFN- & Unreal-Engine-5-Assets • Jetzt kostenlos testen",
+      "enabled": true
+    },
+    {
+      "id": "dealCardTripo3D",
+      "category": "creator",
+      "title": "Tripo3D AI Studio",
+      "url": "https://studio.tripo3d.ai/?utm_source=creator_invite&utm_medium=linkcopy&utm_campaign=8C5U60&utm_content=5622211",
+      "badge1": "+300 GRATIS CREDITS",
+      "badge2": "",
+      "subtitle": "High-End 3D-Modelle & Game-Ready Meshes per KI generieren",
+      "highlight": "🚀 Exklusiver BPG Creator-Invite (Code 8C5U60) mit 300 Start-Credits",
+      "enabled": true
+    },
+    {
+      "id": "cardExoticGunGame",
+      "category": "fortnite",
+      "type": "map",
+      "title": "Exotic Gun Game",
+      "mapCode": "8440-7299-2792",
+      "url": "https://www.fortnite.com/@BloodyPathGaming/8440-7299-2792",
+      "badge1": "🔥 FEATURED UEFN MAP",
+      "badge2": "⚡ 16 SPIELER",
+      "subtitle": "Exotische Waffen, Fast-Paced Action & 16-Spieler Zero Build Progression",
+      "highlight": "🎮 In Fortnite starten",
+      "enabled": true
+    },
+    {
+      "id": "cardNoBuildArena",
+      "category": "fortnite",
+      "type": "map",
+      "title": "No-Build Arena Ranked",
+      "mapCode": "8655-3576-5634",
+      "url": "https://www.fortnite.com/@BloodyPathGaming/8655-3576-5634",
+      "badge1": "🏆 RANKED ARENA",
+      "badge2": "⚔️ 1V1 ZERO BUILD",
+      "subtitle": "Kompetitive 1v1 Duelle, Sofort-Matchmaking, Skill-Paarung & Ranked-Progression",
+      "highlight": "🎮 In Fortnite starten",
+      "enabled": true
+    },
+    {
+      "id": "cardEpicCreatorPortal",
+      "category": "fortnite",
+      "title": "BPG Fortnite Hub",
+      "url": "https://www.fortnite.com/@BloodyPathGaming",
+      "badge1": "CREATOR PORTAL",
+      "badge2": "",
+      "subtitle": "Alle offiziellen Bloody Path Gaming Maps favorisieren",
+      "highlight": "🌟 Zero-Build Arena, Blitz-Hub & Nemesis-Maps im Epic Store",
+      "enabled": true
+    },
+    {
+      "id": "card3DAssets",
+      "category": "assets",
+      "title": "BPG 3D Game Assets",
+      "url": "https://discord.gg/FjADKCgYS2",
+      "badge1": "DEV SHOWCASE",
+      "badge2": "",
+      "subtitle": "AAA-Qualität Waffen-Sets, UEFN & Unreal Engine 5 Assets (10K / 30K / 100K)",
+      "highlight": "💎 Custom 3D-Pipelines, Meshes & Anfragen via Discord",
+      "enabled": true
+    },
+    {
+      "id": "dealCardDiscord",
+      "category": "community",
+      "title": "BPG Community Discord",
+      "url": "https://discord.gg/FjADKCgYS2",
+      "badge1": "SQUAD JOINEN",
+      "badge2": "",
+      "subtitle": "Mitspielen, exklusive Deals abstauben & Streams verfolgen",
+      "highlight": "🎧 Werde Teil des Bloody Path Gaming Squads (Join the Bloodline)",
+      "enabled": true
+    }
+  ]
+}

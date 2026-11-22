@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="tripoGrad" x1="6" y1="10" x2="58" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 6L57 49H7L32 6Z" stroke="url(#tripoGrad)" stroke-width="4" fill="rgba(99, 102, 241, 0.14)" stroke-linejoin="round"/>
+  <path d="M32 6L32 35L57 49" stroke="url(#tripoGrad)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M32 35L7 49" stroke="url(#tripoGrad)" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="32" cy="35" r="4" fill="#38bdf8"/>
+</svg>

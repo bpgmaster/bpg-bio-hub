@@ -5,6 +5,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initDynamicConfig();
   initEntranceAnimation();
   initSoundEngine();
   initCardPointerSpotlight();
@@ -17,6 +18,70 @@ document.addEventListener('DOMContentLoaded', () => {
   initSecretAnalyticsDashboard();
   initAnalyticsTracking();
 });
+
+/**
+ * Loads hub-config.json dynamically (managed via local BPG Studio Cockpit)
+ * Falls back gracefully to the static HTML if offline or opened via file://
+ */
+async function initDynamicConfig() {
+  try {
+    const res = await fetch('hub-config.json', { cache: 'no-cache' });
+    if (!res.ok) return;
+    const cfg = await res.json();
+
+    if (cfg.profile) {
+      const statusText = document.querySelector('.status-text');
+      if (statusText && cfg.profile.statusText) statusText.textContent = cfg.profile.statusText;
+      const tagline = document.querySelector('.channel-tagline');
+      if (tagline && cfg.profile.tagline) tagline.textContent = cfg.profile.tagline;
+      const codeText = document.getElementById('creatorCodeText');
+      const stickyCode = document.querySelector('.sticky-creator-code');
+      if (cfg.profile.creatorCode) {
+        if (codeText) codeText.textContent = cfg.profile.creatorCode;
+        if (stickyCode) stickyCode.textContent = cfg.profile.creatorCode;
+      }
+    }
+
+    if (Array.isArray(cfg.cards)) {
+      cfg.cards.forEach(item => {
+        const el = document.getElementById(item.id);
+        if (!el) return;
+        if (item.enabled === false) {
+          el.setAttribute('data-disabled', 'true');
+          el.style.display = 'none';
+          return;
+        }
+        el.removeAttribute('data-disabled');
+        el.style.display = '';
+        if (item.url && el.tagName === 'A') el.href = item.url;
+
+        if (item.type === 'map') {
+          const titleEl = el.querySelector('.map-title');
+          const descEl = el.querySelector('.map-desc');
+          const ctaEl = el.querySelector('.map-cta');
+          const codeBtn = el.querySelector('.map-copy-code-btn');
+          const codeNum = el.querySelector('.map-code-number');
+          if (titleEl && item.title) titleEl.textContent = item.title;
+          if (descEl && item.subtitle) descEl.textContent = item.subtitle;
+          if (ctaEl && item.highlight) ctaEl.textContent = item.highlight;
+          if (item.mapCode) {
+            if (codeBtn) codeBtn.setAttribute('data-code', item.mapCode);
+            if (codeNum) codeNum.textContent = item.mapCode;
+          }
+        } else {
+          const titleEl = el.querySelector('.card-title');
+          const subEl = el.querySelector('.card-subtitle');
+          const highEl = el.querySelector('.card-highlight');
+          if (titleEl && item.title) titleEl.textContent = item.title;
+          if (subEl && item.subtitle) subEl.textContent = item.subtitle;
+          if (highEl && item.highlight) highEl.textContent = item.highlight;
+        }
+      });
+    }
+  } catch (e) {
+    // Static HTML fallback active
+  }
+}
 
 /**
  * Futuristic Web Audio API Sound Engine (Zero external assets required)
@@ -434,6 +499,10 @@ function initCategoryNavigation() {
 
       // Filter deal and map items
       filterableItems.forEach((item, idx) => {
+        if (item.getAttribute('data-disabled') === 'true') {
+          item.classList.add('is-hidden');
+          return;
+        }
         const itemCat = item.getAttribute('data-category');
         if (category === 'all' || itemCat === category) {
           item.classList.remove('is-hidden');
@@ -584,6 +653,8 @@ function renderAnalyticsView() {
     'gamivo': '🕹️ Gamivo Game-Keys',
     'eneba': '🎁 Eneba Guthaben-Karten',
     'eklipse': '🎬 Eklipse.gg AI Clipping',
+    'meshy': '🧊 Meshy.ai 3D Generator',
+    'tripo3d': '🚀 Tripo3D AI Studio (Invite 8C5U60)',
     'creator_code': '⚔️ Creator Code BloodyPathGaming (Kopiert)',
     'sticky_creator_bar': '📌 Sticky Creator Bar (Code Kopiert)',
     'map_exotic': '🏝️ Exotic Gun Game (Play Launch)',
