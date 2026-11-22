@@ -2,8 +2,10 @@
 <!-- cspell:disable -->
 
 > **Offizieller BPG Gaming-, Deal- & Community-Hub für TikTok, Instagram, Facebook & Discord**  
-> Stand: 2026-10-25 | Autor: BPG Nexus Architect (`@bpg-nexus-architect`)  
-> Pfad: `d:\Bisherige Projekte\To-Do-Liste aufarbeiten\TikTok Business und Shop\bpg-bio-hub\`
+> Stand: 2026-11-22 | Autor: BPG Nexus Architect (`@bpg-nexus-architect`)  
+> Live-URL: **https://bpgmaster.github.io/bpg-bio-hub/**  
+> Repository: **https://github.com/bpgmaster/bpg-bio-hub**  
+> Lokaler Pfad: `d:\Bisherige Projekte\To-Do-Liste aufarbeiten\TikTok Business und Shop\bpg-bio-hub\`
 
 ---
 
