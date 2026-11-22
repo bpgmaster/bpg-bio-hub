@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bloody Path Gaming | Deals, Hardware & Keys</title>
+  <meta name="description" content="Offizieller BPG Hub – Gaming Hardware bei notebooksbilliger, günstige Game-Keys bei Instant Gaming & Gamivo, Creator-Code BloodyPathGaming.">
+  
+  <!-- Open Graph / Social Sharing (Discord, Facebook, WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bloody Path Gaming | Deals & Community Hub">
+  <meta property="og:description" content="Exklusive Gaming-Deals, Hardware-Rabatte und günstige Game-Keys von Bloody Path Gaming.">
+  <meta property="og:image" content="assets/bpg-banner.png">
+
+  <!-- Twitter / X Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bloody Path Gaming | Deals, Hardware & Maps">
+  <meta name="twitter:description" content="Offizieller BPG Hub – Gaming Hardware, günstige Game-Keys & Fortnite UEFN Maps.">
+  <meta name="twitter:image" content="assets/bpg-banner.png">
+
+  <!-- PWA & Mobile Web App Capabilities -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/jpeg" href="assets/bpg-logo-neon.jpg">
+  <link rel="apple-touch-icon" href="assets/bpg-logo-neon.jpg">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="BPG Hub">
+  <meta name="theme-color" content="#0d0e12">
+
+  <!-- Google Fonts: Space Grotesk & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Background Lighting -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Mobile Hub Container -->
+  <main class="hub-container">
+    
+    <!-- Epic BPG Brand Hero Banner -->
+    <div class="brand-banner-container">
+      <img src="assets/bpg-banner.png" alt="Bloody Path Gaming" class="brand-banner-img">
+    </div>
+
+    <!-- Profile & Header Section -->
+    <header class="profile-header">
+      <div class="header-top-bar">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span class="status-text">🔥 Gaming & Deals aktiv</span>
+        </div>
+        <div class="header-action-group">
+          <button type="button" class="sound-toggle-btn" id="soundToggleBtn" title="Sound-Effekte umschalten (Mute/Unmute)" aria-label="Sound-Effekte umschalten">
+            <svg class="sound-icon sound-icon-on" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+            <svg class="sound-icon sound-icon-off" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" style="display: none;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+            <span class="sound-label">Audio</span>
+          </button>
+          <button type="button" class="share-hub-btn" id="shareHubBtn" title="Bio-Hub teilen" aria-label="Bio-Hub teilen">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            <span>Teilen</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="profile-meta">
+        <h1 class="channel-title">
+          Bloody Path Gaming
+          <span class="verified-badge" title="Verifizierter BPG Creator">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </span>
+        </h1>
+        <p class="channel-handle">@lionspathgaming</p>
+        <p class="channel-tagline">Deals, Hardware & Game-Keys | BPG Community Hub</p>
+      </div>
+
+      <!-- Quick Category Navigation Chips with Live Filter & Smooth Scroll -->
+      <nav class="category-nav" id="categoryNav" aria-label="Kategorien-Schnellnavigation">
+        <button type="button" class="nav-chip active" data-category="all" data-target="all">🔥 Alle</button>
+        <button type="button" class="nav-chip" data-category="keys" data-target="sec-keys">🎮 Game-Keys</button>
+        <button type="button" class="nav-chip" data-category="hardware" data-target="sec-hardware">💻 Hardware</button>
+        <button type="button" class="nav-chip" data-category="fortnite" data-target="sec-fortnite">⚔️ Fortnite</button>
+        <button type="button" class="nav-chip" data-category="creator" data-target="sec-creator">🎬 Creator AI</button>
+        <button type="button" class="nav-chip" data-category="assets" data-target="sec-assets">🎨 3D Assets</button>
+        <button type="button" class="nav-chip" data-category="community" data-target="sec-community">💬 Community</button>
+      </nav>
+    </header>
+
+    <!-- Deal Links Section -->
+    <section class="links-section" id="linksSection" aria-label="Partner & Deals">
+      
+      <!-- Category 1: Top Live Game Deals (Instant Gaming) -->
+      <div class="section-divider" id="sec-keys" data-category-divider="keys">
+        <span class="divider-label">⚡ LIVE DEALS & GAME-KEYS (INSTANT GAMING)</span>
+      </div>
+
+      <!-- Instant Gaming Dynamic Live Deal Banner (Höchste Priorität / Dynamischer Eyecatcher) -->
+      <div class="ig-banner-wrapper filterable-item" data-category="keys" aria-label="Instant Gaming Live Deal">
+        <div class="card-glow"></div>
+        <div class="ig-banner-header">
+          <span class="live-indicator"><span class="live-dot"></span> LIVE DEAL</span>
+          <span class="live-provider">Tagesaktuelles Bestpreis-Angebot</span>
+        </div>
+        <div class="ig-partner-banner" id="ig-partner-banner"></div>
+      </div>
+
+      <!-- Instant Gaming Card -->
+      <a href="https://www.instant-gaming.com/?igr=bloodypathgaming" 
+         target="_blank" 
+         rel="noopener sponsored" 
+         class="deal-card card-ig filterable-item" 
+         id="dealCardInstantGaming"
+         data-category="keys"
+         data-analytics="instant-gaming">
+        <div class="card-glow"></div>
+        <div class="card-icon ig-icon-box">
+          <img src="assets/instant-gaming-box.png" alt="Instant Gaming" class="card-brand-img">
+        </div>
+        <div class="card-body">
+          <div class="card-topline">
+            <span class="card-title">Instant Gaming Store</span>
+            <div class="deal-tags-group">
+              <span class="deal-tag hot-tag pulse-glow">🔥 DEAL DES TAGES</span>
+              <span class="deal-tag save-tag">BIS ZU -70%</span>
+            </div>
+          </div>
+          <p class="card-subtitle">PC-, Steam-, PS5- & Xbox-Keys in Sekundenschnelle per E-Mail</p>
+          <div class="card-highlight">⚡ Top-Vorbestellungen, Steam-Sales & Guthaben zum Bestpreis</div>
+        </div>
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Category 2: Hardware & Tech (NBB) -->
+      <div class="section-divider" id="sec-hardware" data-category-divider="hardware">
+        <span class="divider-label">💻 HARDWARE & TECH DEALS</span>
+      </div>
+
+      <!-- notebooksbilliger.de Card -->
+      <a href="https://www.awin1.com/cread.php?awinmid=11348&awinaffid=2572227" 
+         target="_blank" 
+         rel="noopener sponsored" 
+         class="deal-card card-nbb filterable-item" 
+         id="dealCardNBB"
+         data-category="hardware"
+         data-analytics="nbb-hardware">
+        <div class="card-glow"></div>
+        <div class="card-icon nbb-icon-box">
+          <img src="assets/nbb-icon.svg" alt="notebooksbilliger" class="card-brand-svg">
+        </div>
+        <div class="card-body">
+          <div class="card-topline">
+            <span class="card-title">notebooksbilliger.de</span>
+            <span class="deal-tag hot-tag">HARDWARE DEALS</span>
+          </div>
+          <p class="card-subtitle">Gaming-Laptops, RTX 40-Grafikkarten, OLED-Monitore & Gear</p>
+          <div class="card-highlight">🔥 Deutschlands beliebtester Tech-Shop • Exklusive Rabattaktionen</div>
+        </div>
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Category 3: Weitere Game Stores & Guthaben -->
+      <div class="section-divider" id="sec-morekeys" data-category-divider="keys">
+        <span class="divider-label">🕹️ WEITERE KEYS & GUTHABEN</span>
+      </div>
+
+      <!-- Gamivo Card -->
+      <a href="https://www.gamivo.com/?glv=bloodypathgaming" 
+         target="_blank" 
+         rel="noopener sponsored" 
+         class="deal-card card-gamivo filterable-item" 
+         id="dealCardGamivo"
+         data-category="keys"
+         data-analytics="gamivo">
+        <div class="card-glow"></div>
+        <div class="card-icon gamivo-icon-box">
+          <img src="assets/gamivo-icon.svg" alt="Gamivo" class="card-brand-svg">
+        </div>
+        <div class="card-body">
+          <div class="card-topline">
+            <span class="card-title">Gamivo Marktplatz</span>
+            <span class="deal-tag">SMART DEALS</span>
+          </div>
+          <p class="card-subtitle">Globaler Game-Store für Steam, EA App, Ubisoft & Software</p>
+          <div class="card-highlight">💎 Bis zu -85% Rabatt • Riesiges Key-Sortiment</div>
+        </div>
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Eneba Card (Vorbereitet, aktivierbar) -->
+      <a href="https://www.eneba.com" 
+         target="_blank" 
+         rel="noopener sponsored" 
+         class="deal-card card-eneba filterable-item" 
+         id="dealCardEneba"
+         data-category="keys"
+         data-analytics="eneba">
+        <div class="card-glow"></div>
+        <div class="card-icon eneba-icon-box">
+          <img src="assets/eneba-icon.png" alt="Eneba" class="card-brand-img">
+        </div>
+        <div class="card-body">
+          <div class="card-topline">
+            <span class="card-title">Eneba Guthaben & Keys</span>
+            <span class="deal-tag gift-tag">GUTHABEN & PSN</span>
+          </div>
+          <p class="card-subtitle">PlayStation, Xbox, Nintendo eShop & Mystery Packs</p>
+          <div class="card-highlight">🎁 Günstige Konsolen-Guthabenkarten ohne Abonnement</div>
+        </div>
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Category 4: Creator & Streamer Tools -->
+      <div class="section-divider" id="sec-creator" data-category-divider="creator">
+        <span class="divider-label">🎬 CREATOR TOOLS & AI</span>
+      </div>
+
+      <!-- Eklipse AI Card -->
+      <a href="https://eklipse.gg/premium#BPG" 
+         target="_blank" 
+         rel="noopener sponsored" 
+         class="deal-card card-eklipse filterable-item" 
+         id="dealCardEklipse"
+         data-category="creator"
+         data-analytics="eklipse">
+        <div class="card-glow"></div>
+        <div class="card-icon eklipse-icon-box">
+          <img src="assets/eklipse-icon.svg" alt="Eklipse.gg AI" class="card-brand-svg">
+        </div>
+        <div class="card-body">
+          <div class="card-topline">
+            <span class="card-title">Eklipse.gg AI Studio</span>
+            <span class="deal-tag tool-tag">AI CLIPPING</span>
+          </div>
+          <p class="card-subtitle">Automatische TikTok- & YouTube-Shorts aus Gaming-Streams</p>
+          <div class="card-highlight">🎬 KI-Clipper mit Code #BPG für Bonus-Credits & Premium-Features</div>
+        </div>
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Category 5: Fortnite Maps & Creator Code -->
+      <div class="section-divider" id="sec-fortnite" data-category-divider="fortnite">
+        <span class="divider-label">⚔️ FORTNITE MAPS & CREATOR SUPPORT</span>
+      </div>
+
+      <!-- Interactive Creator Code Card -->
+      <div class="creator-card filterable-item" id="creatorCodeCard" data-category="fortnite" role="button" tabindex="0" title="Klicken, um den Code zu kopieren">
+        <div class="card-glow"></div>
+        <div class="creator-card-bg"></div>
+        <div class="creator-info">
+          <span class="creator-label">EPIC GAMES & FORTNITE CREATOR CODE</span>
+          <div class="creator-code-row">
+            <span class="creator-code-text" id="creatorCodeText">BloodyPathGaming</span>
+            <span class="copy-badge" id="copyBadge">
+              <svg class="copy-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span class="copy-label">Kopieren</span>
+            </span>
+          </div>
+          <p class="creator-help-text">Unterstütze uns im Fortnite Item-Shop & Epic Games Store – 100% kostenlos!</p>
+        </div>
+      </div>
+
+      <!-- Featured Exotic Gun Game Map Card with Visual Artwork Banner -->
+      <a href="https://www.fortnite.com/@BloodyPathGaming/8440-7299-2792" 
+         target="_blank" 
+         rel="noopener" 
+         class="map-showcase-card filterable-item" 
+         id="cardExoticGunGame"
+         data-category="fortnite"
+         data-analytics="map_exotic">
+        <div class="card-glow"></div>
+        <div class="map-thumb-wrapper">
+          <img src="assets/exotic-gungame-thumb.jpg" alt="Exotic Gun Game UEFN Artwork" class="map-thumb-img">
+          <div class="map-badges-container">
+            <span class="map-badge-overlay">🔥 FEATURED UEFN MAP</span>
+            <span class="map-mode-badge">⚡ 16 SPIELER</span>
+            <span class="map-live-pill"><span class="radar-dot"></span> LIVE</span>
+          </div>
+          <div class="map-thumb-gradient"></div>
+        </div>
+        <div class="map-card-content">
+          <div class="map-card-header">
+            <span class="map-title">Exotic Gun Game</span>
+            <button type="button" class="map-copy-code-btn" id="copyMapCodeBtn" data-code="8440-7299-2792" title="Map-Code kopieren" aria-label="Map-Code 8440-7299-2792 kopieren">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span class="map-code-number">8440-7299-2792</span>
+              <span class="map-copy-tag">Kopieren</span>
+            </button>
+          </div>
+          <p class="map-desc">Exotische Waffen, Fast-Paced Action & 16-Spieler Zero Build Progression</p>
+          <div class="map-footer-row">
+            <span class="map-cta">🎮 In Fortnite starten</span>
+            <div class="card-arrow">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Featured No-Build Arena Ranked Map Card with Visual Artwork Banner -->
+      <a href="https://www.fortnite.com/@BloodyPathGaming/8655-3576-5634" 
+         target="_blank" 
+         rel="noopener" 
+         class="map-showcase-card card-arena filterable-item" 
+         id="cardNoBuildArena"
+         data-category="fortnite"
+         data-analytics="map_nobuild_arena">
+        <div class="card-glow"></div>
+        <div class="map-thumb-wrapper">
+          <img src="assets/nobuild-arena-thumb.jpg" alt="No-Build Arena 1v1 Zero Build Artwork" class="map-thumb-img">
+          <div class="map-badges-container">
+            <span class="map-badge-overlay arena-badge">🏆 RANKED ARENA</span>
+            <span class="map-mode-badge arena-mode">⚔️ 1V1 ZERO BUILD</span>
+            <span class="map-live-pill arena-live"><span class="radar-dot crimson-radar"></span> LIVE</span>
+          </div>
+          <div class="map-thumb-gradient"></div>
+        </div>
+        <div class="map-card-content">
+          <div class="map-card-header">
+            <span class="map-title">No-Build Arena Ranked</span>
+            <button type="button" class="map-copy-code-btn" id="copyArenaMapCodeBtn" data-code="8655-3576-5634" title="Map-Code kopieren" aria-label="Map-Code 8655-3576-5634 kopieren">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span class="map-code-number">8655-3576-5634</span>
+              <span class="map-copy-tag">Kopieren</span>
+            </button>
+          </div>
+          <p class="map-desc">Kompetitive 1v1 Duelle, Sofort-Matchmaking, Skill-Paarung & Ranked-Progression</p>
+          <div class="map-footer-row">
+            <span class="map-cta">🎮 In Fortnite starten</span>
+            <div class="card-arrow">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Fortnite Creator Page / Community Hub -->
+      <a href="https://www.fortnite.com/@BloodyPathGaming" 
+         target="_blank" 
+         rel="noopener" 
+         class="deal-card card-epic filterable-item" 
+         id="cardEpicCreatorPortal"
+         data-category="fortnite"
+         data-analytics="epic_creator_portal">
+        <div class="card-glow"></div>
+        <div class="card-icon epic-icon-box">
+          <img src="assets/fortnite-f.svg" alt="Fortnite" class="card-brand-svg">
+        </div>
+        <div class="card-body">
+          <div class="card-topline">
+            <span class="card-title">BPG Fortnite Hub</span>
+            <span class="deal-tag epic-tag">CREATOR PORTAL</span>
+          </div>
+          <p class="card-subtitle">Alle offiziellen Bloody Path Gaming Maps favorisieren</p>
+          <div class="card-highlight">🌟 Zero-Build Arena, Blitz-Hub & Nemesis-Maps im Epic Store</div>
+        </div>
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Category 6: 3D Assets & Game Dev Portfolio -->
+      <div class="section-divider" id="sec-assets" data-category-divider="assets">
+        <span class="divider-label">🎨 3D ASSETS & DEV PORTFOLIO</span>
+      </div>
+
+      <!-- 3D Asset Showcase Card -->
+      <a href="https://discord.gg/FjADKCgYS2" 
+         target="_blank" 
+         rel="noopener" 
+         class="deal-card card-3d filterable-item" 
+         id="card3DAssets"
+         data-category="assets"
+         data-analytics="portfolio_3d">
+        <div class="card-glow"></div>
+        <div class="card-icon asset-icon-box">
+          <img src="assets/3d-asset-weapon.png" alt="3D Game Assets" class="asset-img-preview">
+        </div>
+        <div class="card-body">
+          <div class="card-topline">
+            <span class="card-title">BPG 3D Game Assets</span>
+            <span class="deal-tag asset-tag">DEV SHOWCASE</span>
+          </div>
+          <p class="card-subtitle">AAA-Qualität Waffen-Sets, UEFN & Unreal Engine 5 Assets (10K / 30K / 100K)</p>
+          <div class="card-highlight">💎 Custom 3D-Pipelines, Meshes & Anfragen via Discord</div>
+        </div>
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Category 7: Community -->
+      <div class="section-divider" id="sec-community" data-category-divider="community">
+        <span class="divider-label">💬 BPG COMMUNITY</span>
+      </div>
+
+      <!-- Discord Community Card -->
+      <a href="https://discord.gg/FjADKCgYS2" 
+         target="_blank" 
+         rel="noopener" 
+         class="deal-card card-discord filterable-item" 
+         id="dealCardDiscord"
+         data-category="community"
+         data-analytics="discord">
+        <div class="card-glow"></div>
+        <div class="card-icon discord-icon-box">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-topline">
+            <span class="card-title">BPG Community Discord</span>
+            <div class="deal-tags-group">
+              <span class="discord-live-pill"><span class="radar-dot blurple-radar"></span> SQUAD ONLINE</span>
+              <span class="deal-tag join-tag">SQUAD JOINEN</span>
+            </div>
+          </div>
+          <p class="card-subtitle">Mitspielen, exklusive Deals abstauben & Streams verfolgen</p>
+          <div class="card-highlight">🎧 Werde Teil des Bloody Path Gaming Squads (Join the Bloodline)</div>
+        </div>
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- Footer Brand Emblem (Round Neon Avatar at the bottom!) -->
+    <div class="footer-brand-emblem" id="footerBrandEmblem" title="Bloody Path Gaming (Triple-Tap für Admin-Statistik)" role="button" tabindex="0">
+      <div class="avatar-wrapper footer-avatar">
+        <div class="avatar-ring"></div>
+        <div class="avatar-glow"></div>
+        <div class="avatar-inner">
+          <img src="assets/bpg-logo-neon.jpg" alt="Bloody Path Gaming" class="bpg-avatar-img">
+        </div>
+      </div>
+      <p class="footer-brand-title">Bloody Path Gaming</p>
+      <p class="footer-brand-subtitle">Join the Bloodline • Stream & Deals</p>
+    </div>
+
+    <!-- Social Media Icon Row -->
+    <nav class="socials-nav" aria-label="Social Media Kanäle">
+      <a href="https://www.tiktok.com/@lionspathgaming" target="_blank" rel="noopener" class="social-icon social-tiktok" title="TikTok @lionspathgaming">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.13V9.4a6.33 6.33 0 0 0-.86-.06A6.34 6.34 0 0 0 3.1 15.68a6.34 6.34 0 0 0 10.82 4.48c1.37-1.37 2.13-3.23 2.13-5.16V8.67a8.21 8.21 0 0 0 4.77 1.52v-3.5z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/bloodypathgaming" target="_blank" rel="noopener" class="social-icon social-instagram" title="Instagram @bloodypathgaming">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/bloodypathgaming" target="_blank" rel="noopener" class="social-icon social-facebook" title="Facebook Bloody Path Gaming">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+      <a href="https://www.snapchat.com/add/bloodypathgaming" target="_blank" rel="noopener" class="social-icon social-snapchat" title="Snapchat @bloodypathgaming">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12.004 0c-4.148 0-7.382 3.064-7.382 6.944 0 .748.118 1.46.332 2.122-.927.203-1.636.85-1.636 1.764 0 .736.46 1.341 1.134 1.62-.053.308-.09.626-.09.957 0 1.25.545 2.373 1.433 3.125-.133.518-.466 1.467-1.488 1.765-.304.089-.526.347-.557.659-.033.313.124.615.397.76 1.86.993 3.738.747 4.79.289.432.41 1.472 1.092 3.067 1.092 1.583 0 2.635-.678 3.072-1.09 1.05.457 2.924.708 4.786-.289.273-.146.43-.448.397-.76-.03-.312-.253-.57-.557-.659-1.022-.298-1.355-1.247-1.488-1.765.888-.752 1.433-1.875 1.433-3.125 0-.331-.037-.649-.09-.957.674-.279 1.134-.884 1.134-1.62 0-.914-.709-1.561-1.636-1.764.214-.662.332-1.374.332-2.122C19.386 3.064 16.152 0 12.004 0z"/>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UCIkCxX6_S3JzWSSqjxu8KVA" target="_blank" rel="noopener" class="social-icon social-youtube" title="YouTube Bloody Path Gaming">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      </a>
+      <a href="https://www.twitch.tv/shadowzonetv" target="_blank" rel="noopener" class="social-icon social-twitch" title="Twitch Stream">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+        </svg>
+      </a>
+      <a href="https://kick.com/bloodypathgaming" target="_blank" rel="noopener" class="social-icon social-kick" title="Kick Stream">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M3 3h5v5h3v-3h5v5h-3v3h3v5h-5v-3h-3v3H3z"/>
+        </svg>
+      </a>
+    </nav>
+
+    <!-- Transparent Legal Affiliate Disclaimer & Link Bar -->
+    <footer class="hub-footer">
+      <p class="disclaimer-text">
+        ⚖️ <strong>Transparenz-Hinweis:</strong> Die mit Partner-Symbolen gekennzeichneten Links sind Affiliate-Links. Wenn du über diese Links etwas kaufst, erhalten wir eine kleine Provision. Für dich ändert sich am Preis absolut nichts – danke für deinen Support von Bloody Path Gaming!
+      </p>
+      <div class="footer-legal-bar">
+        <button type="button" class="legal-modal-trigger" id="openLegalBtn">
+          ⚖️ Impressum & Datenschutz
+        </button>
+      </div>
+      <p class="copyright-text">© 2026 Bloody Path Gaming. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+  <!-- Legal & Privacy Modal (Impressum & Datenschutz gemäß § 5 DDG & DSGVO) -->
+  <div class="modal-overlay" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle" hidden>
+    <div class="modal-backdrop" id="legalModalBackdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-title">
+          <span class="modal-badge">RECHTLICHER SCHUTZ</span>
+          <h2 id="legalModalTitle">Impressum & Datenschutz</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeLegalBtn" aria-label="Modal schließen">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <section class="legal-section">
+          <h3>📌 Angaben gemäß § 5 DDG (Telemedien)</h3>
+          <p><strong>Bloody Path Gaming (BPG Universe)</strong><br>
+          Verantwortlicher Betreiber: Timbo (Lead Creator & Studio Direction)<br>
+          E-Mail: <a href="mailto:bloodypathgaming@gmail.com" class="legal-link">bloodypathgaming@gmail.com</a><br>
+          Offizieller TikTok-Kanal: <a href="https://www.tiktok.com/@lionspathgaming" target="_blank" rel="noopener" class="legal-link">@lionspathgaming</a><br>
+          Plattform: Bloody Path Gaming Link & Deals Hub</p>
+        </section>
+
+        <section class="legal-section">
+          <h3>💼 Transparenz bei Werbe- & Affiliate-Links</h3>
+          <p>Dieser Hub enthält Affiliate-Links (Instant Gaming, notebooksbilliger.de via Awin, Gamivo, Eneba, Eklipse.gg sowie Epic Games Creator Code). Bei einem Kauf über diese Links erhalten wir eine anteilige Vermittlungsprovision. <strong>Für dich entstehen dadurch keinerlei Mehrkosten oder Nachteile.</strong> Du unterstützt damit direkt die Content- und Map-Produktion von Bloody Path Gaming.</p>
+        </section>
+
+        <section class="legal-section">
+          <h3>🛡️ Datenschutz & Lokale Speicherung (DSGVO)</h3>
+          <p>Wir respektieren deine Privatsphäre und erfassen auf dieser Bio-Hub-Seite <strong>keine personenbezogenen Daten</strong>:</p>
+          <ul class="legal-list">
+            <li><strong>Keine Tracking-Cookies von Drittanbietern:</strong> Wir setzen keine Marketing-Pixel oder Cookies zur Profilbildung ein.</li>
+            <li><strong>Lokale Klickzählung (localStorage):</strong> Zur rein anonymen Auswertung der beliebtesten Deals wird im lokalen Browserspeicher ein Zähler geführt. Es werden keine IP-Adressen übertragen oder gespeichert.</li>
+            <li><strong>Externe Zielseiten:</strong> Beim Klick auf externe Links (z.&nbsp;B. Instant Gaming, TikTok, Discord) gelten die Datenschutzbestimmungen der jeweiligen Zielplattform.</li>
+          </ul>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-modal-close" id="confirmLegalBtn">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Secret Timbo Analytics Dashboard Modal (Triple-Tap Trigger auf Footer-Emblem) -->
+  <div class="modal-overlay" id="analyticsModal" role="dialog" aria-modal="true" aria-labelledby="analyticsModalTitle" hidden>
+    <div class="modal-backdrop" id="analyticsModalBackdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-title">
+          <span class="modal-badge admin-badge">BPG STUDIO DASHBOARD</span>
+          <h2 id="analyticsModalTitle">📊 Lokale Hub-Statistik</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeAnalyticsBtn" aria-label="Dashboard schließen">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="analytics-summary-card">
+          <div class="summary-item">
+            <span class="summary-label">Gesamte Klicks</span>
+            <span class="summary-val" id="analyticsTotalClicks">0</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Top Performer</span>
+            <span class="summary-val" id="analyticsTopPerformer">-</span>
+          </div>
+        </div>
+
+        <h3 class="analytics-section-title">Klicks nach Deal & Map</h3>
+        <div class="analytics-list" id="analyticsListContainer">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <div class="analytics-note">
+          🔒 <strong>Hinweis für Timbo:</strong> Diese Daten stammen ausschließlich aus dem lokalen Speicher deines aktuellen Test-Geräts.
+        </div>
+      </div>
+      <div class="modal-footer modal-footer-dual">
+        <button type="button" class="btn-modal-secondary" id="resetAnalyticsBtn">🗑️ Statistik leeren</button>
+        <button type="button" class="btn-modal-primary" id="confirmAnalyticsBtn">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Floating Creator Code Mini-Bar (Erscheint beim Scrollen) -->
+  <aside class="sticky-creator-bar" id="stickyCreatorBar" aria-label="Creator-Code Schnellzugriff">
+    <div class="sticky-creator-content">
+      <div class="sticky-creator-info">
+        <span class="sticky-creator-icon" aria-hidden="true">⚔️</span>
+        <div class="sticky-creator-text">
+          <span class="sticky-creator-title">CREATOR CODE</span>
+          <span class="sticky-creator-code">BloodyPathGaming</span>
+        </div>
+      </div>
+      <button type="button" class="sticky-copy-btn" id="stickyCopyBtn" aria-label="Creator Code BloodyPathGaming kopieren">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <span class="sticky-btn-text">Kopieren</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Dynamic Toast Notification for Code Copy & Share -->
+  <div class="toast-notification" id="copyToast" role="alert" aria-live="polite">
+    <span class="toast-icon">✅</span>
+    <span class="toast-message" id="toastMessage">Creator Code <strong>BloodyPathGaming</strong> kopiert!</span>
+  </div>
+
+  <!-- Instant Gaming Live Partner Banner Config & Loader -->
+  <script>
+    window.igBannerConfig = {
+      lang: 'de',
+      igr: 'bloodypathgaming',
+      banners: ['ig-partner-banner']
+    };
+  </script>
+  <script src="https://www.instant-gaming.com/api/banner/partner/loader.js" defer></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
